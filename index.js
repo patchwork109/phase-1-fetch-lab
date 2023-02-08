@@ -1,6 +1,9 @@
 function fetchBooks() {
   // To pass the tests, don't forget to return your fetch!
-  
+  fetch('https://anapioficeandfire.com/api/books')
+  .then((resp) => resp.json())
+  .then((json) => renderBooks(json));
+  return fetch();
 }
 
 function renderBooks(books) {
@@ -15,3 +18,9 @@ function renderBooks(books) {
 document.addEventListener('DOMContentLoaded', function() {
   fetchBooks();
 });
+
+
+// The 5th book in the series
+// The 1031st character in the series
+// The total number of pages of all the books
+
